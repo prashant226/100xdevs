@@ -25,10 +25,24 @@
 //     console.log(ans);
 // }
 // console.log(ans);
-let ans = 0;
+// let ans = 0;
 
-for (let i = 0; i <= 100; i++) {
-    ans = ans + i;
+// for (let i = 0; i <= 100; i++) {
+//     ans = ans + i;
 
+// }
+// console.log(ans);
+
+//even or not even
+// let n = 89;
+
+// if (n % 2 == 0) {
+//     console.log("the num is a even");
+// } else {
+//     console.log("the num is not a even");
+// }
+const arr = [1, 2, 3, 4, 5, 6, 7, 8];
+for (let i = 0; i < arr.length; i++) {
+    if (arr[i] % 2 == 0)
+        console.log(arr[i]);
 }
-console.log(ans);
