@@ -48,3 +48,10 @@
 // }
 
 //complex objects::
+
+const personArray = ["harkirat", "ayush", "abhishek", "kas"];
+const gender = ["male", "male", "male", "girl"];
+for (let i = 0; i < personArray.length; i++) {
+    if (gender[i] == "male")
+        console.log(personArray[i]);
+}
