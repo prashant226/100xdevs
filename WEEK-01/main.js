@@ -51,7 +51,17 @@
 
 const personArray = ["harkirat", "ayush", "abhishek", "kas"];
 const gender = ["male", "male", "male", "girl"];
-for (let i = 0; i < personArray.length; i++) {
-    if (gender[i] == "male")
-        console.log(personArray[i]);
+// for (let i = 0; i < personArray.length; i++) {
+//     if (gender[i] == "male")
+//         console.log(personArray[i]);
+// }
+
+const user1 = {
+    firstName: "harkirat",
+    age: "21"
 }
+const user2 = {
+    secondName: "pritam",
+    age: "23"
+}
+console.log(user1.firstName);
