@@ -49,19 +49,28 @@
 
 //complex objects::
 
-const personArray = ["harkirat", "ayush", "abhishek", "kas"];
-const gender = ["male", "male", "male", "girl"];
-// for (let i = 0; i < personArray.length; i++) {
-//     if (gender[i] == "male")
-//         console.log(personArray[i]);
-// }
+// const personArray = ["harkirat", "ayush", "abhishek", "kas"];
+// const gender = ["male", "male", "male", "girl"];
+// // for (let i = 0; i < personArray.length; i++) {
+// //     if (gender[i] == "male")
+// //         console.log(personArray[i]);
+// // }
 
-const user1 = {
-    firstName: "harkirat",
-    age: "21"
+// const user1 = {
+//     firstName: "harkirat",
+//     age: "21"
+// }
+// const user2 = {
+//     secondName: "pritam",
+//     age: "23"
+// }
+// console.log(user1.firstName);
+// console.log(user2.secondName);
+
+
+function findSum(a, b) {
+    //do things we the input and return output..
+    return a + b;
 }
-const user2 = {
-    secondName: "pritam",
-    age: "23"
-}
-console.log(user1.firstName);
+const value = findSum(2, 3);
+console.log(value);
