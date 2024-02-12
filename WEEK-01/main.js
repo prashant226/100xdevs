@@ -67,10 +67,18 @@
 // console.log(user1.firstName);
 // console.log(user2.secondName);
 
-
-function findSum(a, b) {
-    //do things we the input and return output..
-    return a + b;
+function sum(num1, num2) {
+    let result = num1 + num2;
+    return result;
 }
-const value = findSum(2, 3);
-console.log(value);
+
+function displayResult(data) {
+    console.log("result o fthe sum is ::" + data);
+}
+
+function displayResultPassive(data) {
+    console.log("sum's result is :" + data);
+}
+
+const ans = sum(1, 2);
+displayResult(ans);
