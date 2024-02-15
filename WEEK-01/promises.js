@@ -79,6 +79,9 @@ function kiratAsyncFunction() {
     return p;
 }
 
+
+
+
 async function main() {
     let value = await kiratAsyncFunction()
     console.log(value);
