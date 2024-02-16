@@ -5,6 +5,7 @@ const port = 3000;
 
 
 app.get('/', function(req, res) {
+    //db call 1sec
     res.send('hello world');
 })
 
