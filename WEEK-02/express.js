@@ -2,6 +2,7 @@
 const express = require("express");
 const app = express();
 const port = 3000;
+const bodyParser = require("body-parser");
 
 // app.get("/router-handle", function(req, res) {
 //     res.send("hello world");
@@ -11,7 +12,7 @@ const port = 3000;
 //     })
 // })
 
-
+app.use(bodyParser({}));
 app.post('/', (req, res) => {
     //db call 1sec
     console.log(req.body)
