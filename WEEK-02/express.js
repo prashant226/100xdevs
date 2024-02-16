@@ -11,11 +11,11 @@ const bodyParser = require("body-parser");
 //         age: 21
 //     })
 // })
-
-app.use(bodyParser({}));
+//middleWare
+app.use(bodyParser.json());
 app.post('/', (req, res) => {
     //db call 1sec
-    console.log(req.body)
+    console.log(req.body);
     res.send({
         msg: "2+2=4"
     });
