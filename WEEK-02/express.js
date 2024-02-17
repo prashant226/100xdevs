@@ -73,13 +73,31 @@ app.post("/", function(req, res) {
     })
 })
 app.put("/", function(req, res) {
-        for (let i = 0; i < users[0].kidneys.length; i++) {
-            users[0].kidneys[i].healthy = true;
+    for (let i = 0; i < users[0].kidneys.length; i++) {
+        users[0].kidneys[i].healthy = true;
+    }
+    res.json({});
+
+})
+
+
+//remove all unhealthy kidneys
+app.delete("/", function(req, res) {
+
+    let oneUnhealthykidney = false;
+    for (let i = 0; i < users[0].kidneys.length; i++) {
+
+    }
+
+    const newKidney = [];
+    for (let i = 0; i < users[0].kidneys.length; i++) {
+        if (users[0].kidneys[i].healthy) {
+            newKidney.push({
+                healthy: true
+            })
         }
-        res.json({});
-
-    })
-    // app.del("/", function(req, res) {
-
-// })
+    }
+    users[0].kidneys = newKidney;
+    res.json({ msg: "done" })
+})
 app.listen(3000);
