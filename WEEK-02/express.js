@@ -25,19 +25,61 @@ const port = 3000;
 //     console.log(`the app is been running on ${port}`)
 // })
 
-function Sum(n) {
-    let ans = 0;
-    for (let i = 0; i <= n; i++) {
-        ans = ans + i;
-    }
-    return ans;
-
-}
 
 
+//req , res => request and response...
+// app.get("/", function(req, res) {
+
+// })
+
+
+const users = [{
+    name: "hkirat",
+    kidneys: [{
+            healthy: false
+        }
+        // {
+        //     healthy: true
+        // }
+    ]
+
+}];
 app.get("/", function(req, res) {
-    const n = req.query.n;
-    const ans = Sum(30);
-    res.send("hi your ans is " + ans);
+    const johnKidney = users[0].kidneys;
+    const numberOfKidney = johnKidney.length;
+    //filter
+    let numberOfKidneyHealthy = 0;
+    for (let i = 0; i < johnKidney.length; i++) {
+        if (johnKidney[i].healthy) {
+            numberOfKidneyHealthy = numberOfKidneyHealthy + 1;
+        }
+    }
+    const numberOfKidneyUnHealthy = numberOfKidney - numberOfKidneyHealthy;
+    res.json({
+        johnKidney,
+        numberOfKidneyHealthy,
+        numberOfKidneyUnHealthy
+    })
+
 })
+app.use(express.json())
+app.post("/", function(req, res) {
+    const isHealthy = req.body.isHealthy;
+    users[0].kidneys.push({
+        healthy: isHealthy
+    })
+    res.json({
+        msg: "done re"
+    })
+})
+app.put("/", function(req, res) {
+        for (let i = 0; i < users[0].kidneys.length; i++) {
+            users[0].kidneys[i].healthy = true;
+        }
+        res.json({});
+
+    })
+    // app.del("/", function(req, res) {
+
+// })
 app.listen(3000);
